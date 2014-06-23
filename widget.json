@@ -1,6 +1,6 @@
 {
-	“name”: “Currently Playing on Spotify and iTunes”,
-	“description”: “Show what track is playing on either iTunes or Spotify, iTunes Radio unfortunately doesn’t word.”,
-	“author”: “Justin Sheppard”,
+	“name”: “What’s Currently Playing?”,
+	“description”: ”Displays to the user what’s playing on either iTunes or Spotify (iTunes Ruadio doesn’t work :( )”,
+	“author”: “Justin Sheppard”
 	“email”: “justinmshep@outlook.com”
 }

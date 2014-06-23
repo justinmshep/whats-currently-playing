@@ -10,22 +10,20 @@ IFS='|' read -r theArtist theName <<<"$(osascript <<<'if application "iTunes" is
 			on error
 				return "iTunes Radio | is playing"
 			end try
-		else
-			if application "Spotify" is running then
-				tell application "Spotify"
-					if player state is playing then
-						try
-							set theTrack to current track
-							set theArtist to artist of theTrack
-							set theName to name of theTrack
-							return theName & "|" & theArtist
-						on error
-							return "Oops something | went wrong"
-						end try
-					end if
-				end tell
-			end if
-			
+		end if
+	end tell
+end if
+if application "Spotify" is running then
+	tell application "Spotify"
+		if player state is playing then
+			try
+				set theTrack to current track
+				set theArtist to artist of theTrack
+				set theName to name of theTrack
+				return theName & "|" & theArtist
+			on error
+				return "Oops something | went wrong"
+			end try
 		end if
 	end tell
 end if')"
